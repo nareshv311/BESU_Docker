@@ -3,6 +3,8 @@ services:
   node:
     image: hyperledger/besu:latest
     container_name: "node-1"
+    ports:
+      - 8545:8546
     volumes:
       - .:/usr/app/
     command: --config-file=/usr/app/config.toml
